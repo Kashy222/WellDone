@@ -55,7 +55,7 @@ export default function Dashboard() {
       </main>
 
       {/* Persistent Bottom Navigation */}
-      <div className="lg:absolute lg:bottom-6 lg:left-1/3 lg:-translate-x-1/2 z-50">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50">
         <BottomNav activeTab={activeTab} setActiveTab={setActiveTab} />
       </div>
     </div>

@@ -55,10 +55,15 @@ export default function InputEngine() {
               disabled={state.isProcessing}
               title={text.trim() ? "Send Message" : "Tap to Vent / Audio Journal"}
             >
+              {/* Subtle ambient glow behind the idle mic blob */}
+              {!state.isProcessing && !text.trim() && (
+                <div className="absolute inset-0 rounded-full bg-aura-sage-light/30 blur-md animate-pulse" />
+              )}
+              
               {text.trim() ? (
-                <svg className="w-5 h-5 group-hover:scale-110 transition-transform text-aura-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                <svg className="w-5 h-5 group-hover:scale-110 transition-transform text-aura-text-primary relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
               ) : (
-                <svg className={`w-5 h-5 ${state.isProcessing ? 'animate-pulse' : 'group-hover:scale-110 transition-transform'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                <svg className={`w-5 h-5 relative z-10 ${state.isProcessing ? 'animate-pulse' : 'animate-[pulse_3s_ease-in-out_infinite] group-hover:scale-110 transition-transform'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
               )}
             </button>
           </div>
