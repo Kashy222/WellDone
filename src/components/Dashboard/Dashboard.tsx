@@ -21,8 +21,8 @@ export default function Dashboard() {
       <header className="flex items-center justify-between px-6 py-4 shrink-0 bg-white/30 backdrop-blur-xl z-20 border-b border-white/40 shadow-sm sticky top-0">
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-2">
-            <WaveLogo className="w-10 h-6 text-aura-text-primary" />
-            <h1 className="text-xl font-medium tracking-wide text-aura-text-primary">WellDone</h1>
+            <WaveLogo className="w-10 h-6 text-aura-terracotta" />
+            <h1 className="text-2xl font-black tracking-tighter text-aura-text-primary">Well<span className="text-aura-terracotta">Done</span></h1>
           </div>
           <div className="flex items-center gap-3">
             <span className="text-[10px] font-semibold text-aura-sage-dark tracking-wider uppercase">Target: NEET 2026</span>

@@ -21,23 +21,23 @@ const config: Config = {
           offwhite: '#FDFBF7',
           cream: '#F5F2EB',
           sage: {
-            light: '#C9D6CE',
-            DEFAULT: '#A3B1A6',
-            dark: '#82A392'
+            light: '#FFE8DF', // soft peach
+            DEFAULT: '#FFB088', // light orange
+            dark: '#FF7A3D' // vibrant orange
           },
           terracotta: {
-            light: '#E6B09E',
-            DEFAULT: '#D98A6C'
+            light: '#FFC0A3', // lighter strong orange
+            DEFAULT: '#FF5E00' // classic headspace orange
           },
-          shift: '#F9F7F1',
+          shift: '#FFF5F0', // warm offwhite shift
           emerald: {
-            light: '#A7C4B5',
-            DEFAULT: '#729B85'
+            light: '#FFA17A', // medium orange
+            DEFAULT: '#D64000' // deep rust orange
           },
           orb: {
-            from: '#A3B1A6',
-            via: '#C9D6CE',
-            to: '#E6B09E'
+            from: '#FFB088',
+            via: '#FF7A3D',
+            to: '#FF5E00'
           }
         }
       },

@@ -46,7 +46,7 @@ export default function InputEngine() {
           <div className="relative w-12 h-12 flex items-center justify-center">
             {state.isProcessing && (
               <div className="absolute inset-0">
-                <LiquidOrb className="w-full h-full" colors={['#A3B1A6', '#D98A6C', '#729B85']} isPulsing={true} />
+                <LiquidOrb className="w-full h-full" colors={['#FFB088', '#FF5E00', '#D64000']} isPulsing={true} />
               </div>
             )}
             <button 
