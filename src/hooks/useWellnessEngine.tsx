@@ -62,19 +62,23 @@ export function WellnessProvider({ children }: { children: ReactNode }) {
       
       const lowerText = text.toLowerCase();
 
-      // Simple heuristic for hackathon MVP
-      if (lowerText.includes('panic') || lowerText.includes('anxious') || lowerText.includes('breathe')) {
+      // Advanced heuristic for MVP
+      if (lowerText.includes('panic') || lowerText.includes('anxious') || lowerText.includes('breathe') || lowerText.includes('stress') || lowerText.includes('overwhelm')) {
         aiResponseContent = "It sounds like your anxiety is spiking right now. Let's ground your nervous system. Try this quick Bhramari breathing exercise with me.";
         intervention = 'bhramari';
-      } else if (lowerText.includes('fried') || lowerText.includes('brain dead') || lowerText.includes('break')) {
+        newTrigger = "Acute Stress Response";
+      } else if (lowerText.includes('fried') || lowerText.includes('brain dead') || lowerText.includes('break') || lowerText.includes('tired') || lowerText.includes('exhausted') || lowerText.includes('burnout')) {
         aiResponseContent = "Your cognitive load is maxed out. You have severe burnout probability right now. Let's break the lockup. Just scribble on this pad for a minute to reset your focus.";
         intervention = 'scribble';
-      } else if (lowerText.includes('behind') || lowerText.includes('syllabus') || lowerText.includes('physics')) {
-        aiResponseContent = "You're feeling overwhelmed by the syllabus backlog. Let's do some Anulom Vilom to balance your hemispheres before you tackle the next chapter.";
+        newTrigger = "Cognitive Overload";
+      } else if (lowerText.includes('behind') || lowerText.includes('syllabus') || lowerText.includes('physics') || lowerText.includes('fail') || lowerText.includes('compare') || lowerText.includes('score')) {
+        aiResponseContent = "You're feeling overwhelmed by the pressure and syllabus backlog. Let's do some Anulom Vilom to balance your hemispheres before you tackle the next chapter.";
         intervention = 'anulom';
-        newTrigger = "Late-Night Physics Backlog Stress";
+        newTrigger = "Performance Anxiety";
       } else {
-        aiResponseContent = "I'm tracking this. Keep venting if you need to, I'm here. It's completely normal to feel this way during peak exam season.";
+        // Fallback so it always suggests something helpful for the demo
+        aiResponseContent = "I'm tracking this. Your stress levels seem elevated. Let's do a quick breathing exercise to reset your nervous system.";
+        intervention = 'bhramari';
       }
 
       const aiMessage: Message = {
