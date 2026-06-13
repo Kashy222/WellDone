@@ -22,9 +22,12 @@ export default function Dashboard() {
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-2">
             <WaveLogo className="w-10 h-6 text-aura-text-primary" />
-            <h1 className="text-xl font-medium tracking-wide text-aura-text-primary hidden">WellDone</h1>
+            <h1 className="text-xl font-medium tracking-wide text-aura-text-primary">WellDone</h1>
           </div>
-          <span className="text-[10px] font-semibold text-aura-sage-dark tracking-wider uppercase">Target: NEET 2026</span>
+          <div className="flex items-center gap-3">
+            <span className="text-[10px] font-semibold text-aura-sage-dark tracking-wider uppercase">Target: NEET 2026</span>
+            <span className="text-[10px] font-semibold bg-aura-sage-light/30 text-aura-sage-dark px-2 py-0.5 rounded-full tracking-wider uppercase">5.5h studied today</span>
+          </div>
         </div>
         <div className="w-8 h-8 rounded-full bg-white/60 backdrop-blur-md flex items-center justify-center border border-white/50 shadow-sm">
           <span className="text-xs font-semibold text-aura-text-secondary">JD</span>
